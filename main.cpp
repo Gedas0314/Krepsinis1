@@ -17,6 +17,8 @@
 #include "Vadovas.h"
 #include <algorithm>
 #include <string>
+#include<conio.h>
+#include <cstring>
 
 using namespace std;
 void setcolor(unsigned char color) {
@@ -43,17 +45,19 @@ bool first = true;
     //ASMUO asmuo("Petras", " Piotr  ", 25);
     //asmuo.Informacija();
     //Agentas agentas("LRytas", "Vilnius  ", 1000);
+    vector<Zaidejas>zaidejai;
+
     Zaidejas jonas("Jonas", "Jonaitis", 25, "Krastas");
     Zaidejas samas("Samas", "Samuelis", 23, "Izaidejas");
     Zaidejas sabas("Arvydas", "Sabas", 50, "Centras");
     Zaidejas siska("Jurgis", "Siska", 25, "Krastas");
     Zaidejas magis("Margiris", "Margis", 18, "Puolėjas");
 
-    //zaidejai.emplace_back(jonas);
-    //zaidejai.emplace_back(samas);
-    //zaidejai.emplace_back(sabas);
-    //zaidejai.emplace_back(siska);
-    //zaidejai.emplace_back(magis);
+    zaidejai.emplace_back(jonas);
+    zaidejai.emplace_back(samas);
+    zaidejai.emplace_back(sabas);
+    zaidejai.emplace_back(siska);
+    zaidejai.emplace_back(magis);
     //string vardas;
     //cout << "Sukurkite savo treneri" << endl;
     //cout <<"Iveskite jo varda:";
@@ -77,6 +81,8 @@ Kandidatas paulauskas("Modestas Paulauskas");
 Kandidatas kazlauskas("Jonas Kazlauskas");
 Kandidatas girskis("Rimas Girskis");
 Kandidatas macijauskas("Arvydas Macijauskas");
+Kandidatas krapikas("Gintaras Krapikas");
+Kandidatas maciulis("Jonas Mačiulis");
 
 
 kandidatai.emplace_back(sabonis);
@@ -86,28 +92,35 @@ kandidatai.emplace_back(paulauskas);
 kandidatai.emplace_back(kazlauskas);
 kandidatai.emplace_back(girskis);
 kandidatai.emplace_back(macijauskas);
+kandidatai.emplace_back(krapikas);
+kandidatai.emplace_back(maciulis);
 
 
 
 HANDLE h=GetStdHandle(STD_OUTPUT_HANDLE);//spalva
 SetConsoleTextAttribute(h,FOREGROUND_RED);//spalva
-cout<<"***********************************************"<<endl;
+
+
+
+cout<<"*********************************************"<<endl;
 
 string name;
+
 cout<<"Sukurkite komandos ŠŪKĮ"<<endl;
-cout<<"Iveskite ŠUKĮ   "<<endl;
-cout<<"***********************************************"<<endl;
+cout<<"Iveskite ŠŪKĮ   "<<endl;
+cout<<"*********************************************"<<endl;
 
 
 getline(cin,name);
-cout<<"************************************************"<<endl;
+cout<<"*********************************************"<<endl;
 
 cout<<"Šukis sukurtas:  "<<name<<","<<endl;
-cout<<"************************************************"<<endl;
+cout<<"*********************************************"<<endl;
 
 Vadovas vadovas(name);
 vadovas.SudarytiRinktine(kandidatai);
-cout<<"Rinktinė sudaryta !"<<endl;
+
+cout<<"Rinktinės pagrindiniai žaidėlai !"<<endl;
 cout<<"...................."<<endl;
 for(auto it: vadovas.getRinktine().GetKandidatai()){
     //if (first == true){name.push_back();}
@@ -133,7 +146,7 @@ cout<<"Nariu skaicius: "<<vadovas.getRinktine().GetKandidatai().size()
     Rungtynes rungtynes("LKL", "2021-05-08", "2021-07-27", "");
     Polisas polisas ("Trauma","Pilnas",5000);
     EuroChamp euroChamp("FIBA Taure","2021-06-01","Berlynas Vokietija","Kovid testas butinas");
-    Apranga apranga("Avaline", "raudona-juoda", "baltai-raudona");
+    Apranga apranga("avaline", "raudona-juoda", "baltai-raudona");
 
 
     cout << "CEMPIONATAS " << rungtynes.GetPavadinimas() << endl;
@@ -166,6 +179,7 @@ cout<<"Nariu skaicius: "<<vadovas.getRinktine().GetKandidatai().size()
         cout << "2.  Agentas" << endl;
         cout << "3.  Vadybininkas " << endl;
         cout << "4.  Treneris" << endl;
+        ///cout << "5.  Vadovas" << endl;
         cout << "0.  Uždaryti programą" << endl;
         cin >> input;
 
@@ -173,20 +187,32 @@ cout<<"Nariu skaicius: "<<vadovas.getRinktine().GetKandidatai().size()
             case 1:
                 Zaidejas Meniu();
                 cout << "---------------------- " << endl;
-                cout << "Registruotas cempionatui " << endl;
+                cout << "Žaidėjas Jonas Valančiūnas registruotas čempionatui " << endl;
                 cout << "CEMPIONATAS " << rungtynes.GetPavadinimas() << endl;
-                cout << "Turnyro trukme " << rungtynes.GetNuoData() <<" iki " << rungtynes.GetIkiData() << endl;
+                cout << "Turnyro trukmė " << rungtynes.GetNuoData() <<" iki " << rungtynes.GetIkiData() << endl;
                 cout << "Draudimas" << endl;
                 cout << "-----------------------" << endl;
-                cout << "Draudimo rusys: "<< polisas.getKategorija()<<","<< " Pobudis: "<<polisas.getPavadinimas()<<","<< " Ismoka: "<< polisas.getKaina()<<","<<endl;
+                cout << "Draudimo rūšis: "<< polisas.getKategorija()<<","<< " Pobudis: "<<polisas.getPavadinimas()<<","<< " Išmoka: "<< polisas.getKaina()<<"€,"<<endl;
+                cout<<"Apranga apšilimui: "<<apranga.getApsilimoApranga()<<","<<"Apranga varžyboms: "<<apranga.getVarzybineApranga()<<","<<"Speciali: "<<apranga.getAvaline()<<","<<endl;
                 cout << "-----------------------" << endl;
-                cout << "Registruotas varzyboms " << endl;
+                cout << "Registruotas varžyboms " << endl;
+
                 cout << "-----------------------" << endl;
+
+
                 for(auto it: rungtynes.GetTvarkarastis()){
                     cout << it << endl;
+
+
+
+
+
+
+
+
                 }
 
-                
+
 
 
 
@@ -210,6 +236,11 @@ cout<<"Nariu skaicius: "<<vadovas.getRinktine().GetKandidatai().size()
             default:
                 cout << "Tokio punkto nėra, naudokite paruoštą sarašą pvz: 1, 2, 3," << endl;
                 break;
+           // case 5:
+               // Vadovas.Meniu();
+              //  cout << "Vadovas" << endl;
+               // break;
+
 
         }
 

@@ -3,10 +3,10 @@
 LKL::LKL(){
 //(const string &pavadinimas, const string &nuoData, const string &ikiData, const string &adresas)
   //      : Rungtynes(pavadinimas, nuoData, ikiData, adresas) {
-    RungtyniuTvarkarastis zalgiris("Varzybos", "Kaunas", 100);
-    RungtyniuTvarkarastis neptunas("Varzybos", "Klaipeda", 200);
-    RungtyniuTvarkarastis siauliai("Varzybos", "Siauliai", 400);
-    RungtyniuTvarkarastis alytus("Astunfinalis", "Alytus", 500);
+    RungtyniuTvarkarastis zalgiris("Varžybos", "Kaunas", 100);
+    RungtyniuTvarkarastis neptunas("Varžybos", "Klaipėda", 200);
+    RungtyniuTvarkarastis siauliai("Varžybos", "Šiauliai", 400);
+    RungtyniuTvarkarastis alytus("Aštunfinalis", "Alytus", 500);
     RungtyniuTvarkarastis prienai("Pusfinalis", "Prienai", 300);
 
 

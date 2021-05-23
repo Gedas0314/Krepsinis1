@@ -11,6 +11,8 @@ void Vadybininkas::Vadybininkas::IdetiInformacija(RungtyniuTvarkarastis rungtyni
         cout<<" Jusu informacija nepatvirtinta"<<endl;
     }else{lkl.IdetiNaujasVarzybas(rungtyniuTvarkarastis);
         cout<<"Jusu informacija patvirtinta."<<endl;
+
+
     }
 }
 void Vadybininkas::PerziuretiAnonsus() {

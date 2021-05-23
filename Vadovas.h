@@ -22,6 +22,7 @@ public:
     const string &getVardas() const;
 
     const Rinktine &getRinktine() const;
+    void Meniu();
 
     //void SudarytiRinktine(vector<Kandidatas>kandidatai);
     void SudarytiRinktine(vector<Kandidatas>kandidatai);

@@ -4,11 +4,16 @@
 #include "EuroChamp.h"
 #include "Apranga.h"
 #include <windows.h>
+#include "Vadovas.h"
+#include "Kandidatas.h"
+#include "Zaidejas.h"
 
 
 Rungtynes rungtynes("LKL", "2021-04-08", "2021-07-27", "");
 EuroChamp euroChamp("FIBA Taure","2021-06-01","Berlynas Vokietija","Kovid testas butinas");
 EuroChamp euroChamp1("FIBA Čempionatas ", "2021/2022 sezonas ", "Paryžius Prancuzija ", "Skiepų pasas privalomas");
+Zaidejas jonas("Jonas", "Jonaitis", 25, "Krastas");
+Apranga apranga("avaline", "raudona-juoda", "baltai-raudona");
 void PerziuretiPasirinkima();
 void Treneris::UzregistruotiZaideja(Zaidejas zaidejas){
     komanda.emplace_back(zaidejas);
@@ -20,6 +25,7 @@ Treneris::Treneris(const string &vardas, const string &pavarde, int amzius) : AS
 void Treneris::SudarytiKomanda(vector<Zaidejas> nariai) {
 
 }
+
 
 void Treneris::Meniu() {
     HANDLE h=GetStdHandle(STD_OUTPUT_HANDLE);//spalva
@@ -36,8 +42,10 @@ void Treneris::Meniu() {
         cout << "1.  Komandos sudėtis " << endl;
         cout << "2.  Sąstatas " << endl;
         cout << "3.  Rungtynes " << endl;
-        cout << "0.  Grįžti atgal" << endl;
+        cout << "4.  Rinktis žaidėjus " << endl;
 
+        cout << "0.  Grįžti atgal" << endl;
+        cout<<"-----------------------"<<endl;
 
         cin >> input;
 
@@ -46,12 +54,14 @@ void Treneris::Meniu() {
         switch (input) {
             case 1:
                 //Treneris Sudetis(); // 1 egz -> a
-                //Treneris PerziuretiAnonsus();
+                Treneris idetiInformacija(
+
+                        );
                 for (const auto & narys:komanda) {
                     cout<<narys.getVardas()<<endl;
                     //cout<<narys.GetPozicija()<<endl;
 
-
+cout<<"........"<<endl;
                 }
 
 
@@ -61,7 +71,7 @@ void Treneris::Meniu() {
 
 
                 for(const auto& narys: komanda){
-                    cout << narys.getVardas()<< "  "<<narys.GetPozicija()<< endl;
+                    cout << narys.getVardas()<< "  "<<narys.GetPozicija()<< ""<<narys.getPavarde()<<""<<narys.getAmzius()<<endl;
                 }
 
 
@@ -71,8 +81,10 @@ void Treneris::Meniu() {
                 cout<<"-----------------------------------------------------------------------------------------"<<endl;
                 cout<<"Numatomos rungtynes Euro FIBA "<<endl;
                 cout<<"-----------------------------------------------------------------------------------------"<<endl;
-                cout<<"Euro Čempionatas  "<<euroChamp.getPavadinimasKlubo()<<","<<euroChamp.getVietosAdresas()<<","<<euroChamp.getLaikoData()<<","<<euroChamp.getTestas() <<    endl;
-                cout<<"Euro Čempionatas "<<euroChamp1.getPavadinimasKlubo()<<","<<euroChamp1.getVietosAdresas()<<","<<euroChamp1.getLaikoData()<<","<<euroChamp1.getTestas()<<endl;
+                cout<<"Euro Čempionatas  "<<euroChamp.getPavadinimasKlubo()<<","<<euroChamp.getVietosAdresas()<<","
+                <<euroChamp.getLaikoData()<<","<<euroChamp.getTestas() <<    endl;
+                cout<<"Euro Čempionatas "<<euroChamp1.getPavadinimasKlubo()<<","
+                <<euroChamp1.getVietosAdresas()<<","<<euroChamp1.getLaikoData()<<","<<euroChamp1.getTestas()<<endl;
                 cout<<"-----------------------------------------------------------------------------------------"<<endl;
                 cout<<"Numatomos rungtynes LKL "<<endl;
                 cout<<"-----------------------------------------------------------------------------------------"<<endl;
@@ -80,15 +92,35 @@ void Treneris::Meniu() {
                    cout << it << endl;
                 }
 
-                //Treneris Sastatas(); // 2 egz -> b
 
-                //for(const auto& narys: komanda){
-                  //  cout << narys.getVardas() << endl;
-               // }
 
                 break;
-            default:
-                cout << "Tokio punkto nėra, naudokite paruoštą sąrašą pvz: 1, 2," << endl;
+
+            case 4:
+
+
+                cout<<"Apranga !"<<endl;
+                cout << "Apranga varžyboms: " << apranga.getVarzybineApranga()<<", Apranga apšilimui: "<<apranga.getApsilimoApranga() << endl;
+
+
+                  //  Treneris treneris( vardas);
+                  //     Treneris.SudarytiRinktine(kandidatai);
+                  //    cout<<"Rinktinės pagrindiniai žaidėlai !"<<endl;
+
+                    // for(auto it: treneris.getRinktine().GetKandidatai()){
+                     //    cout<<it.getVardas()<<endl;
+
+                    //  }
+                  //     cout<<"Nariu skaicius: "<<treneris.getRinktine().GetKandidatai().size()
+               //  <<", "<<endl;
+
+
+              //  }
+
+
+             //   break;
+           // default:
+                //cout << "Tokio punkto nėra, naudokite paruoštą sąrašą pvz: 1, 2," << endl;
                 break;
 
         }

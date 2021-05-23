@@ -13,9 +13,10 @@ bool Rinktine::Itraukti(const Kandidatas &kandidatas) {
 
 }
 void Rinktine::Atvaizduoti() {
-    cout<<"--------------Rinktine-----------"<<endl;
+    //cout<<"====================================="<<endl;
+    cout<<"======**===== Rinktine sudaryta =====**======"<<endl;
     for (const auto &it:kandidatai){
         cout<<it.getVardas()<<endl;
     }
-  cout <<"-----------------------------"<<endl;
+  cout <<"=============================================="<<endl;
 }

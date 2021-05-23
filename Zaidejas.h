@@ -20,6 +20,7 @@ public:
     void Sudetis();
     void RinktisDraudima(Draudimas draudimas);
     void AtvaizduotiDraudima();
+    void AtvaizduotiApranga();
     //Zaidejas(const string &vardas);//
     //const string &GetVardas() const;//
 
@@ -34,12 +35,25 @@ public:
 
 
 
+
 private:
     string pavarde;
     string pozicija;
     string vardas;
+    string amzius;
+public:
+    const string &getAmzius() const;
+
+private:
     vector<Rungtynes>rungtynes;
     vector<Draudimas>draudimas;
+    vector<Apranga>apranga;
+    vector<Zaidejas>zaidejai;
+
+
+
+
+
 
 
 

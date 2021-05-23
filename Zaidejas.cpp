@@ -48,5 +48,11 @@ const string &Zaidejas::getPavarde() const {
     return pavarde;
 }
 
+const string &Zaidejas::getAmzius() const {
+    return amzius;
+}
+
+
+
 
 

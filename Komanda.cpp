@@ -32,7 +32,7 @@ bool Komanda::Itraukti(const Zaidejas &zaidejas) {
 void Komanda::Atvaizduoti() {
 cout << "======================================Komanda===============================" << endl;
 for (const auto &it: zaidejai) {
-cout << it.GetVardas()<< endl;
+cout << it.GetVardas()<<""<<it.getPavarde()<<""<<it.getAmzius()<<it.GetPozicija()<< endl;
 }
 cout << "===============================================================================" << endl;
 

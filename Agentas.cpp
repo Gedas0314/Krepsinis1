@@ -44,6 +44,7 @@ void Agentas::IdetiInformacija(Vadybininkas vadybininkas) {
     cout<<"Premija: "<< premija<<", Varzybos: "<< pavadinimas<<", Susitinka: "<< varzybos<<endl;
 
     RungtyniuTvarkarastis anonsas(pavadinimas,varzybos,premija);
+    cout<<"PREMIJA: "<< premija<<", ČEMPIONATAS: "<< pavadinimas<<", SUSITINKA: "<< varzybos<<endl;
 
     //vadybininkas.IdetiInformacija(RungtyniuTvarkarastis(pavadinimas,varzybos,premija));
     vadybininkas.IdetiInformacija(anonsas);
@@ -93,7 +94,7 @@ void Agentas::Meniu(Vadybininkas vadybininkas) {
                     string name = " ";
                     int score = 0;
                     bool first = true;
-                    cout << "Sudaryti dominančių žaidėjų sąrašą ir kontrakto suma eur.(ivesti kartu) : \n";
+                    cout << "Sudaryti dominančių žaidėjų sąrašą ir nurodyti kontrakto sumą eur.(įvesti kartu) : \n";
                     cout << "Įvesti vardą ir kontrakto sumą : \n";
                     cout << "Uždaryti spausti 0 : \n";
                     cout << "---------------------------------------------------------------------" << endl;

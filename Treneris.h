@@ -6,6 +6,8 @@
 #include "Zaidejas.h"
 #include "Komanda.h"
 #include "Rinktine.h"
+#include "Kandidatas.h"
+#include "Vadovas.h"
 
 using namespace std;
 class Treneris : public ASMUO {
@@ -20,6 +22,7 @@ const Komanda &GetKomanda() const;//
 
     void  SudarytiKomanda(vector<Zaidejas> zaidejas);//
     void Meniu();
+
 
     void IdetiInformacija();
 
