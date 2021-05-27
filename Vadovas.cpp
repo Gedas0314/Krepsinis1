@@ -69,12 +69,12 @@ void Vadovas::SudarytiRinktine(vector<Kandidatas> kandidatai) {
     int nr = 0;
     bool first = true;
     cout << "SUDARYTI ATSARGINĮ RINKTINĖS NARIŲ SĄRAŠĄ: \n";
-    cout << "Įvesti vardą ir priskirkite numerį : \n";
+    cout << "Įvesti vardą ir priskirti numerį : \n";
     cout << "Uždaryti sąrašą, spausti 0 : \n";
     cout << "----------------------------------------------" << endl;
+    cin.ignore();
     while ((cin >> name   >> nr) && (name != "0") ) {
-        cin.ignore(0);
-        cin.ignore(0,' ');
+
         if (first) {
             numeris.push_back(nr);
             names.push_back(name);
@@ -86,8 +86,7 @@ void Vadovas::SudarytiRinktine(vector<Kandidatas> kandidatai) {
                 if (name == names[i])
                     duplicate = true;
             }
-            cin.ignore(0);
-            cin.ignore(0,' ');
+
 
             if (duplicate) {
                 cout << "Toks vardas ar numeris jau yra!\n";

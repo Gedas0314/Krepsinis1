@@ -42,7 +42,7 @@ void Treneris::Meniu() {
         cout << "1.  Komandos sudėtis " << endl;
         cout << "2.  Sąstatas " << endl;
         cout << "3.  Rungtynes " << endl;
-        cout << "4.  Rinktis žaidėjus " << endl;
+        cout << "4.  Apranga " << endl;
 
         cout << "0.  Grįžti atgal" << endl;
         cout<<"-----------------------"<<endl;
@@ -54,9 +54,7 @@ void Treneris::Meniu() {
         switch (input) {
             case 1:
                 //Treneris Sudetis(); // 1 egz -> a
-                Treneris idetiInformacija(
-
-                        );
+                Treneris idetiInformacija();
                 for (const auto & narys:komanda) {
                     cout<<narys.getVardas()<<endl;
                     //cout<<narys.GetPozicija()<<endl;

@@ -2,6 +2,7 @@
 #include "windows.h"
 #include <iostream>
 #include <string>
+#include<conio.h>
 using namespace std;
 //#include <cmath>
 #include <vector>
@@ -44,7 +45,9 @@ void Agentas::IdetiInformacija(Vadybininkas vadybininkas) {
     cout<<"Premija: "<< premija<<", Varzybos: "<< pavadinimas<<", Susitinka: "<< varzybos<<endl;
 
     RungtyniuTvarkarastis anonsas(pavadinimas,varzybos,premija);
+    cout<<"----------------------------------------------------"<<endl;
     cout<<"PREMIJA: "<< premija<<", ČEMPIONATAS: "<< pavadinimas<<", SUSITINKA: "<< varzybos<<endl;
+    cout<<"----------------------------------------------------"<<endl;
 
     //vadybininkas.IdetiInformacija(RungtyniuTvarkarastis(pavadinimas,varzybos,premija));
     vadybininkas.IdetiInformacija(anonsas);
@@ -81,8 +84,8 @@ void Agentas::Meniu(Vadybininkas vadybininkas) {
             case 2:
                 // setcolor(0x02);
                 cout << "---------------------------------------------------------------------" << endl;
-                cout << "Atstovaujam žaidėjams, derinam atstovavimo sąlygas su klubų vadovybe. " << endl;
-                cout << "Derinam kontraktus ir draudimines sąlygas." << endl;
+                cout << "Atstovaujame žaidėjams, deriname atstovavimo sąlygas su klubų vadovybe. " << endl;
+                cout << "Deriname kontraktus ir draudimines sąlygas." << endl;
                 cout << "---------------------------------------------------------------------" << endl;
                 for (const auto &narys:komanda) {
                     cout << narys.getVardas() << endl;
@@ -120,7 +123,7 @@ void Agentas::Meniu(Vadybininkas vadybininkas) {
                         cout << "Įvesti vardą ir kontrakto sumą : ";
                     }
                     for (int i = 0; i < names.size(); i++) {
-                        cout<<"vardas: " << names[i] <<'\t'<<"€: "<< scores[i] << "\n";
+                        cout<<"Vardas: " << names[i] <<"kontrakto suma: "<< scores[i] <<" € "<< "\n";
                     }
 
                     break;

@@ -57,7 +57,7 @@ void Vadybininkas::Meniu() {
 
                 break;
             default:
-                cout<<"Tokio punkto nėra, naudokite paruoštą sąrašą pvz: 1, 2,"<<endl;
+               // cout<<"Tokio punkto nėra, naudokite paruoštą sąrašą pvz: 1, 2,"<<endl;
                 break;
 
         }
